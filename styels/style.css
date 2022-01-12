@@ -4,7 +4,9 @@
     margin: 0;
     padding: 0;
 }
-/* bannar design */
+/* ----------------
+    bannar design
+    ---------------*/
 .bannar{
     width: 1440px;
     height: 677px;
@@ -74,9 +76,9 @@ nav{
 ------------------------- */
 
 .bannar-poster{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+
 }
 
 
@@ -129,7 +131,7 @@ nav{
     height: 474px;
     box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);;
     border-radius: 8px;
-    
+
 }
 
 .player img{
@@ -256,6 +258,29 @@ nav{
 }
 
 
+
+
+@media only screen and (max-width: 480px) {
+    .bannar{
+        width: 360px;
+    height: 695px;
+    }
+    .for-width{
+        margin: 0 auto;
+        width: 80%;
+    }
+
+    .bannar-poster , .players, .hightlight{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-column-gap: 50px;
+     }
+
+     nav{
+         display: none;
+     }
+
+}
 
 
 
